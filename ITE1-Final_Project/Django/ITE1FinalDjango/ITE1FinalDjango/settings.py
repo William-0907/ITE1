@@ -75,7 +75,8 @@ WSGI_APPLICATION = 'ITE1FinalDjango.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'clinic_appointment_db',
+        # 'NAME': 'clinic_appointment_db',
+        'NAME': 'test',
         'USER': 'root',  # or 'django_user' if you created one
         'PASSWORD': '',  # your password if any
         'HOST': '127.0.0.1',
