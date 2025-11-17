@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/auth.css' %}">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- LOGIN FORM -->
+    <form id="loginForm" method="POST" class="{% if show_register %}hidden{% endif %}">
+        {% csrf_token %}
+        <h2>Login</h2>
+
+        {% if login_error %}
+            <div class="error">{{ login_error }}</div>
+        {% endif %}
+
+        {{ form.username.label_tag }}
+        {{ login_form.username }}
+
+        {{ login_form.password.label_tag }}
+        {{ login_form.password }}
+
+        <button class="btn">Login</button>
+
+        <p class="toggle-text">Don’t have an account?
+            <a onclick="toggleForm()">Register</a>
+        </p>
+    </form>
+
+    <!-- REGISTER FORM -->
+    <form id="registerForm" method="POST" class="{% if not show_register %}hidden{% endif %}">
+        {% csrf_token %}
+        <h2>Create Account</h2>
+
+        {% if register_error %}
+            <div class="error">{{ register_error }}</div>
+        {% endif %}
+
+        {{ register_form.username.label_tag }}
+        {{ register_form.username }}
+
+        {{ register_form.email.label_tag }}
+        {{ register_form.email }}
+
+        {{ register_form.password1.label_tag }}
+        {{ register_form.password1 }}
+
+        {{ register_form.password2.label_tag }}
+        {{ register_form.password2 }}
+
+        <button class="btn">Register</button>
+
+        <p class="toggle-text">Already have an account?
+            <a onclick="toggleForm()">Login</a>
+        </p>
+    </form>
+
+</div>
+
+<script>
+function toggleForm() {
+    document.getElementById("loginForm").classList.toggle("hidden");
+    document.getElementById("registerForm").classList.toggle("hidden");
+}
+</script>
+
+</body>
+</html>
