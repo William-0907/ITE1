@@ -5,7 +5,7 @@
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(135deg, ##ebd9ee 0%, #a7d3f8 100%);
+  background: linear-gradient(135deg, #ebd9ee , #a7d3f8 100%);
   height: 100vh;
   display: flex;
   justify-content: center;

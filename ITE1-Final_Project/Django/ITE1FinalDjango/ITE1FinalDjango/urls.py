@@ -20,7 +20,6 @@ from django_main import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index),
-    path('login/', views.login),
+    path('', views.loginRegister),
     path('dashboard/', views.dashboard),
 ]

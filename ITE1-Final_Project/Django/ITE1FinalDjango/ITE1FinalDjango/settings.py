@@ -72,6 +72,10 @@ WSGI_APPLICATION = 'ITE1FinalDjango.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
+
+
+#selpon
+""""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -81,6 +85,17 @@ DATABASES = {
         'PASSWORD': '',  # your password if any
         'HOST': '127.0.0.1',
         'PORT': '3306',
+    }
+}
+"""
+DATABASES = {
+    'default' : {
+    'ENGINE' : 'django.db.backends.mysql',
+    'NAME' : 'test',
+    'USER' : 'root',
+    'PASSWORD' :'',
+    'HOST' : '127.0.0.1',
+    'PORT' : '3306',
     }
 }
 
